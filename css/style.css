@@ -130,8 +130,22 @@ h1, h2, h3, h4, h5, h6 {
     .navbar-light .navbar-nav {
         border-top: 1px solid #EEEEEE;
     }
+
     #registerform {
-        margin-top: 40px;
+        margin-top: 50px;
+    }
+
+    #about {
+        padding: 20px;
+    }
+
+    /* #aboutCard {
+        padding: 10px;
+        margin-bottom: 10px;
+    } */
+
+    #aboutImg {
+        display: none;
     }
 }
 
