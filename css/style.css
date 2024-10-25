@@ -14,7 +14,6 @@
     z-index: 99;
 }
 
-
 /*** Spinner ***/
 #spinner {
     opacity: 0;
@@ -29,9 +28,14 @@
     opacity: 1;
 }
 
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
 
 /*** Button ***/
 .btn {
+    font-family: 'Poppins', sans-serif;
     transition: .5s;
 }
 
@@ -213,8 +217,7 @@
     align-items: center;
     justify-content: center;
     background: #FFFFFF !important;
-    border-radius: 50px;
-    border: 1px dashed var(--primary) !important;
+    border: none;
 }
 
 
@@ -231,16 +234,13 @@
     left: -50%;
     width: 100%;
     height: 100%;
-    background: var(--primary);
     transform: skew(20deg);
     z-index: 1;
 }
 
-
 /*** Category ***/
 .cat-item div {
     background: #FFFFFF;
-    border: 1px dashed rgba(0, 185, 142, .3);
     transition: .5s;
 }
 
@@ -252,11 +252,6 @@
 .cat-item div * {
     transition: .5s;
 }
-
-.cat-item:hover div * {
-    color: #FFFFFF !important;
-}
-
 
 /*** Property List ***/
 .nav-pills .nav-item .btn {
@@ -288,6 +283,15 @@
     border-right: 1px dashed rgba(0, 185, 142, .3) !important;
 }
 
+#call {
+    width: 200px;
+    margin-top: 10px;
+}
+
+#appointment {
+    width: 200px;
+    margin-top: 10px;
+}
 
 /*** Team ***/
 .team-item {
