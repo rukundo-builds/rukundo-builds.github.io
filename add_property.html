@@ -66,7 +66,9 @@
             <a href="about.html" class="nav-item nav-link">About</a>
             <a href="contact.html" class="nav-item nav-link">Contact</a>
           </div>
-          <a href="#" class="btn btn-primary px-3 d-none d-lg-flex">Add Property</a>
+          <div class="py-1">
+            <a href="add_property.html" class="btn btn-primary">Add Property</a>
+          </div>
         </div>
       </nav>
     </div>
@@ -103,7 +105,7 @@
               <option value="apartment">Apartment</option>
             </select>
           </div>
-    
+
           <!-- Sale Type -->
           <div class="form-group mb-3">
             <label for="saleType">Property for</label>
@@ -114,31 +116,32 @@
               <option value="lease">Lease</option>
             </select>
           </div>
-    
+
           <!-- Property Type -->
           <div class="form-group mb-3">
             <label for="type">Type of Property</label>
             <input type="text" id="type" class="form-control" placeholder="e.g. 3-bedroom house on sale" required />
           </div>
-    
+
           <!-- Property Description -->
           <div class="form-group mb-3">
             <label for="description">Property Description</label>
-            <textarea id="description" class="form-control" rows="3" placeholder="Describe your property here..." required></textarea>
+            <textarea id="description" class="form-control" rows="3" placeholder="Describe your property here..."
+              required></textarea>
           </div>
-    
+
           <!-- Pricing -->
           <div class="form-group mb-3">
             <label for="price">Pricing (UGX)</label>
             <input type="text" id="price" class="form-control" placeholder="Price in UGX" required />
           </div>
-    
+
           <!-- Property Location -->
           <div class="form-group mb-3">
             <label for="location">Property Location</label>
             <input type="text" id="location" class="form-control" placeholder="eg. Lugogo Kampala" required />
           </div>
-    
+
           <!-- Ownership Confirmation -->
           <div class="form-group mb-3">
             <label>Are you the owner?</label><br />
@@ -151,133 +154,143 @@
               <label class="form-check-label" for="ownerNo">No</label>
             </div>
           </div>
-    
+
           <!-- Owner's Phone Number (Hidden initially) -->
-          <div class="form-group mb-3" id="ownersPhoneNumberField" style="display: none;">
+          <div class="form-group mb-3" id="ownersPhoneNumberField" style="display: none">
             <label for="ownersPhone">Owner's Phone Number</label>
             <input type="tel" id="ownersPhone" class="form-control" placeholder="Owner's Phone Number" />
           </div>
-    
+
           <!-- Your Phone Number -->
           <div class="form-group mb-3">
             <label for="phoneNumber">Your Phone Number</label>
             <input type="tel" id="phoneNumber" class="form-control" placeholder="Your Phone Number" required />
           </div>
-    
+
           <!-- Property Images -->
           <div class="form-group mb-3">
             <label for="images">Property Images (up to 8 images, maximum 40mb)</label>
             <input type="file" id="images" class="form-control" accept="image/*" multiple required />
             <small class="form-text text-muted">Please upload high-quality images of your property.</small>
           </div>
-    
+
           <!-- Terms and Conditions -->
           <div class="form-check mb-3">
             <input type="checkbox" class="form-check-input" id="terms" required />
             <label class="form-check-label" for="terms">I agree to the terms and conditions</label>
           </div>
-    
+
           <!-- Submit Button -->
-          <button type="submit" class="btn btn-primary w-100">Submit Property</button>
+          <button type="submit" class="btn btn-primary w-100">
+            Submit Property
+          </button>
         </form>
       </div>
     </div>
-    
+
     <!-- JavaScript to show/hide owner's phone field and format price input -->
     <script>
       // Show/Hide Owner's Phone Number Field
-      document.getElementById('ownerNo').addEventListener('change', function () {
-        document.getElementById('ownersPhoneNumberField').style.display = 'block';
-      });
-      document.getElementById('ownerYes').addEventListener('change', function () {
-        document.getElementById('ownersPhoneNumberField').style.display = 'none';
-      });
-    
-      // Format Price Input with Commas
-      document.getElementById('price').addEventListener('input', function (e) {
-        let value = e.target.value.replace(/,/g, '');
-        if (!isNaN(value)) {
-          e.target.value = parseFloat(value).toLocaleString();
-        }
-      });
-    </script>    
+      document
+        .getElementById("ownerNo")
+        .addEventListener("change", function () {
+          document.getElementById("ownersPhoneNumberField").style.display =
+            "block";
+        });
+      document
+        .getElementById("ownerYes")
+        .addEventListener("change", function () {
+          document.getElementById("ownersPhoneNumberField").style.display =
+            "none";
+        });
 
-      <!-- Footer Start -->
-      <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-          <div class="row g-5">
-            <div class="col-lg-4 col-md-6">
-              <h5 class="text-white mb-4">Get In Touch</h5>
-              <p class="mb-2">
-                <i class="fa fa-map-marker-alt me-3"></i>Plot 19, Station Road,
-                Kampala
-              </p>
-              <p class="mb-2">
-                <i class="fa fa-phone-alt me-3"></i>+256759921909
-              </p>
-              <p class="mb-2">
-                <i class="fa fa-envelope me-3"></i>info@properliving.com
-              </p>
-              <div class="d-flex pt-2">
-                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-              </div>
+      // Format Price Input with Commas
+      document
+        .getElementById("price")
+        .addEventListener("input", function (e) {
+          let value = e.target.value.replace(/,/g, "");
+          if (!isNaN(value)) {
+            e.target.value = parseFloat(value).toLocaleString();
+          }
+        });
+    </script>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-4 col-md-6">
+            <h5 class="text-white mb-4">Get In Touch</h5>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>Plot 19, Station Road,
+              Kampala
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i>+256759921909
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i>info@properliving.com
+            </p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+              <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+              <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <div class="col-lg-4 col-md-6">
-              <h5 class="text-white mb-4">Quick Links</h5>
-              <a class="btn btn-link text-white-50" href="">About Us</a>
-              <a class="btn btn-link text-white-50" href="">Contact Us</a>
-              <a class="btn btn-link text-white-50" href="">Our Services</a>
-              <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-              <a class="btn btn-link text-white-50" href="">Terms & Conditions</a>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <h5 class="text-white mb-4">Newsletter</h5>
-              <p>
-                Subscribe to our newsletter. Do not miss out on any offers,
-                listing, quick deals and promo.
-              </p>
-              <div class="position-relative mx-auto" style="max-width: 400px">
-                <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
-                <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
-                  SignUp
-                </button>
-              </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5 class="text-white mb-4">Quick Links</h5>
+            <a class="btn btn-link text-white-50" href="">About Us</a>
+            <a class="btn btn-link text-white-50" href="">Contact Us</a>
+            <a class="btn btn-link text-white-50" href="">Our Services</a>
+            <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+            <a class="btn btn-link text-white-50" href="">Terms & Conditions</a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5 class="text-white mb-4">Newsletter</h5>
+            <p>
+              Subscribe to our newsletter. Do not miss out on any offers,
+              listing, quick deals and promo.
+            </p>
+            <div class="position-relative mx-auto" style="max-width: 400px">
+              <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
+              <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+                SignUp
+              </button>
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="copyright">
-            <div class="row">
-              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <span id="currentYear"></span>
-                <a class="border-bottom" href="#">ProperLiving</a> All Rights
-                Reserved.
-              </div>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy; <span id="currentYear"></span>
+              <a class="border-bottom" href="#">ProperLiving</a> All Rights
+              Reserved.
+            </div>
 
-              <script>
-                document.getElementById("currentYear").textContent =
-                  new Date().getFullYear();
-              </script>
+            <script>
+              document.getElementById("currentYear").textContent =
+                new Date().getFullYear();
+            </script>
 
-              <div class="col-md-6 text-center text-md-end">
-                <div class="footer-menu">
-                  <a href="">Home</a>
-                  <a href="">Cookies</a>
-                  <a href="">Help</a>
-                  <a href="">FQAs</a>
-                </div>
+            <div class="col-md-6 text-center text-md-end">
+              <div class="footer-menu">
+                <a href="">Home</a>
+                <a href="">Cookies</a>
+                <a href="">Help</a>
+                <a href="">FQAs</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Footer End -->
+    </div>
+    <!-- Footer End -->
 
-      <!-- Back to Top -->
-      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
   </div>
 
   <!-- JavaScript Libraries -->
